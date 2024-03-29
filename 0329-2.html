@@ -28,9 +28,19 @@
             console.log("마우스를 갖다 댐")
         } )
 
-        버튼.addEventListener("mouseout", function() { // mouseout : 마우스를 위에서 뗌 out
+        버튼.addEventListener("mouseout", function() { // mouseout : 마우스가 멀리 떨어짐, 나감,
             console.log("마우스를 나감")
         } )
+
+        버튼.addEventListener("mousedown", function() { // mousedown : 마우스 누르는 것
+            console.log("mouse down 실행")              // 굳이 누르는 것 떼는것 구별 안하려면 click
+        })
+
+        버튼.addEventListener("mouseup", function() {  // mouseup : 눌렸던 마우스를 떼는 것
+            console.log("mouse up 실행")              
+        })
+
+
 
     </script>
 </body>
