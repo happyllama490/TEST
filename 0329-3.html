@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+</head>
+<body>
+    <h1 style="background-color: mediumspringgreen; width: 800px; height: 300px;">버튼</h1>
+    <h2 style="background-color: red; width: 800px; height: 300px;">버튼2</h2>
+    <script>
+        let 버튼    
+        버튼 = document.querySelector("h1")
+
+        버튼.addEventListener("mousedown", function() {
+            버튼.style.backgroundColor = "yellow";
+        })
+        버튼.addEventListener("mouseup", function() {
+            버튼.style.backgroundColor = "mediumspringgreen";
+        })   
+        버튼2 = document.querySelector("h2")
+
+        버튼2.addEventListener("mousedown", function() {
+            버튼2.style.backgroundColor = "yellow";
+        })
+        버튼2.addEventListener("mouseup", function() {
+            버튼2.style.backgroundColor = "red";
+        })
+    </script>
+    </body>
+</html>
