@@ -1,0 +1,16 @@
+#test1 {
+    border: 5px solid; padding: 20px;
+    width: 1500px;
+    text-align: center;
+    font-size: 50pt;
+    text-shadow: 3px 3px 3px gray;
+}
+p {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+li {
+    font-style: italic;
+}
+  
