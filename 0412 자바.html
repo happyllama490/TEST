@@ -40,6 +40,11 @@
         // 이벤트가 일어날 때마다 그에 따른 동작, 코드를 실행할 수 있다.
 
         // DOM의 기본 원리: 1. 대상 지정    2.지정한 대상을 조작
+        let 박스 = document.querySelector(".box")
+        // 박스.addEventListener( 이벤트종류 , 실행할코드 )
+        박스.addEventListener("click", function() {
+            console.log("마우스 클릭 했음")
+        } )
     </script>
 </body>
 </html>
