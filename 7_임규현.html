@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_임규현</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        .one{    
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+    <br><br><br><br>
+    <form action="">
+    <fieldset style="margin-left: auto; margin-right: auto; width: 1000px; border-radius: 20px; background-color: white; border-width: 1px;">
+        <br><br>
+        <h1 style="color: greenyellow; font-size: 50px;">| 자신의 프로필을 설정해주세요</h1>
+        <p style="color: gray;">각각의 항목에 정보를 입력해주세요</p>
+        <hr>
+        <br>
+        <label><h2>성명</h2><input style="border-top: 0; border-left: 0; border-right: 0;" type="text" placeholder="성명 입력" class="one"></label>
+        <br>
+        <label><h2>주소</h2><input style="border-top: 0; border-left: 0; border-right: 0;" type="text" placeholder="주소 입력" class="one"></label>
+        <br>
+        <label><h2>연락처</h2><input style="border-top: 0; border-left: 0; border-right: 0;" type="tel" placeholder="연락처 입력" class="one"></label>
+        <br>
+        <label><h2>생년월일</h2>            
+            <select style="border-top: 0; border-left: 0; border-right: 0; border-bottom: 0;" class="one">
+            <option>연도</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+        </select>
+        <select style="border-top: 0; border-left: 0; border-right: 0; border-bottom: 0; margin: 20px;" class="one">
+            <option>월</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+            <input style="border-top: 0; border-left: 0; border-right: 0; width: 80px; margin: 20px;" type="text" class="one">일</label>
+        </label>
+        <br>
+        <h2>성별</h2>
+        <label for=""><input type="radio" name="성별" value="">남<input type="radio" name="성별" value="">여</label>
+        <br>
+        <label><h2>이메일</h2><input style="border-top: 0; border-left: 0; border-right: 0;" type="email" placeholder="이메일 입력" class="one"></label>
+        <br><br>
+        </fieldset>
+        <br><br><br>
+    <fieldset style="margin-left: auto; margin-right: auto; width: 1000px; border-radius: 20px; border-width: 1px; background-color: white;">
+        <br><br>
+        <h1 style="color: greenyellow; font-size: 50px;">| 자신을 소개해 주세요</h1>
+        <p style="color: gray;">아래의 물음에 답하세요</p>
+        <hr>
+        <br>
+        <label><h2>가장 마음에 드는 문구를 고르세요</h2>
+                <input type="radio" name="선택1">어렵게 생각하지 말고 끝까지 하면 된다. 희망을 가지고 간절하게 하면 된다.
+                <br><br>
+                <input type="radio" name="선택1">신념을 가지면 어떤 어려움에도 흔들리지 않는다.
+                <br><br>
+                <input type="radio" name="선택1">"시계처럼 살아라."-이는 시계처럼 꾸준히 가라는 것이다.시계처럼 시간도 지켜라.
+                <br><br>
+                <input type="radio" name="선택1">인생도 건너뛰기가 없고 순간 나는 비약도 없다.
+        </label>
+        <br><br>
+        <label><h2>위 문구를 선택한 이유를 쓰세요</h2><textarea style="font-size: 15px;" name="" id="" cols="140" rows="10" maxlength="500" placeholder="500자 이내" class="one"></textarea></label>
+        <br><br>
+        <h2>자신의 진로 분야를 선택하세요</h2>
+        <label for=""><input type="checkbox">프론트엔드 </label>
+        <label for=""><input type="checkbox">보안 </label>
+        <label for=""><input type="checkbox">백엔드 </label>
+        <label for=""><input type="checkbox">인공지능 </label>
+        <label for=""><input type="checkbox">해커 </label>
+        <label for=""><input type="checkbox">기타 </label>
+        <br><br>
+        <label><h2>개발자가 되기 위한 자신의 공부 우선 순위</h2>
+            <div style="font-size: 40px;">
+            1.<input style="border-top: 0; border-left: 0; border-right: 0;" type="text" class="one">
+            2.<input style="border-top: 0; border-left: 0; border-right: 0;" type="text" class="one">
+            3.<input style="border-top: 0; border-left: 0; border-right: 0;" type="text" class="one">
+        </div>
+    </label>
+    <br><br><br><br>
+    </fieldset>
+    <div style="text-align: center;">
+        <button class="one" style= "width: 250px; height: 70px; background-color: blue; color: white; border-radius: 20px; margin: 50px;" type="submit">제출</button>
+        <button class="one" style="width: 250px; height: 70px; background-color: blue; color: white; border-radius: 20px;" type="reset">초기화</button>
+            </div>
+    </form>
+</div>
+</body>
+</html>
