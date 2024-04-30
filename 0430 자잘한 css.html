@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 자잘한 것</title>
     <style>
-        .box { width: 200px; height: 200px; background-color: skyblue;
-        
+        .box { 
+            width: 50%; height: 200px; background-color: skyblue;
+            border-color: #000;
+            border-width: 5px;
+            border-style: solid;
+
+            border-radius: 50%;
         }
+        .box2 { width: 200px; height: 200px; 
+            background-color: aquamarine; border: 2px solid #000;
+            margin: 0 auto;}
     </style>
 </head>
 <body>
     <div class="box">
     </div>
+    <div class="box" style="position: fixed; top: 80px; background-color: rgba(red, green, blue, alpha);"></div>
+
+    <br><br><br><br>
+    <a href=".box">a태그</a>
+    <a href="/강아지.jpg">이미지 주소 넣어둠</a>
+
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
 </body>
 </html>
