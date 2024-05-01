@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0501 과제</title>
+</head>
+<body>
+    <h1>BMI 테스트</h1>
+        키 <input type="text" id="키1">
+        <br><br>
+        체중 <input type="text" id="체중2">
+        <br><br>
+        <button>계산</button>
+        <hr>
+        <h1>BMI 수치 :<span id="결과값"></span></h1>
+    <script>
+        let 키 = document.querySelector("#키1")
+        let 체중 = document.querySelector("#체중2")
+        
+        let 버튼 = document.querySelector("button")
+        버튼.addEventListener("click", function() {
+        let 데이터1 = 키.value
+        let 데이터2 = 체중.value
+        let 결과 = 데이터2/((데이터1/100)**2)
+        let 결과2 = document.querySelector("#결과값")
+        결과2.textContent = 결과
+    
+       })
+    </script>
+</body>
+</html>
