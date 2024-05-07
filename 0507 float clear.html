@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>float와 clear에 대해</title>
+    <style>
+        .box {width: 100px; height: 100px; float: left;}
+        h2 {clear: both;}
+    </style>
 </head>
 <body>
-    <div class="box">박스1</div>
-    <div class="box">박스2</div>
-    <div class="box">박스3</div>
+    <div style="overflow: hidden;">
+        <div class="box" style="background-color: red;">박스1</div>
+        <div class="box" style="background-color: green;">박스2</div>
+        <div class="box" style="background-color: blue;">박스3</div>
+    </div>
+    <h2>박스를 한줄로 정렬시키기</h2>
 </body>
 </html>
