@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0507 복습</title>
+    <style>
+        button{ display: block; }
+    </style>
 </head>
 <body>
     <h2>overflow 속성 : 내용이 넘치는 경우, 스크롤을 추가</h2>
     <div style="width: 150px; height: 150px; overflow: hidden; background-color: yellow;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, perferendis.</div>
 
-    <h3>인라인레벨</h3>
+    <h3 style="color: tomato;">인라인레벨</h3>
     <h5>글씨로 취급되는 태그</h5>
-    <p>button label input span a b i u img </p>
+    <h5>글씨로 취급되기 때문에 width height 적용 불가 / margin과 padding을 위아래로 적용 불가</h5>
+    <h5>인라인레벨이지만, width height 적용 가능한 태그도 있긴 함 : img button</h5>
+    <p>종류: button label input span a b i u img </p>
 
-    <h3>블록레벨</h3>
+    <h3 style="color: tomato;">블록레벨</h3>
     <h5>본인의 크기에 상관없이 한 줄 다 차지하는 태그</h5>
+    <p>종류: h div p 시맨틱태그 table-tr ul(ol)-li </p>
+
+    <h3 style="color: tomato;">CSS중에 display 속성</h3>
+    <button>버튼1</button>
+    <button>버튼2</button>
 </body>
 </html>
