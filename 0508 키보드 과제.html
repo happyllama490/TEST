@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+</head>
+<body>
+    <h1>가고 싶은 해외여행지(a, s, d, f)</h1>
+    <div style="border: solid 2px; width: 750px; height: 450px; text-align: center;">
+        <br>
+        <img id="img" src="https://content.skyscnr.com/m/347b41475eff8b20/original/kite-surfing-bali.jpg?resize=1800px:1800px&quality=100" width="500px" height="340px">
+        <h1 style="text-align: center;"><span id="h1">인도네시아</span></h1>
+    </div>
+    <script>
+        let 이미지=document.querySelector("#img")
+        let 글자=document.querySelector("#h1")
+        document.addEventListener("keyup",function(event){
+            if (event.key=="a") {
+            이미지.setAttribute("src", "https://content.skyscnr.com/m/66f726da145315bc/original/GettyImages-177400426_doc.jpg?resize=1800px:1800px&quality=100")
+            글자.textContent="몽골"
+        }
+        else if (event.key=="s") {
+            이미지.setAttribute("src", "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTZ1H3OAXEvakNHHhZWB5_ic_KqfFPiPsvFbNIdiYgpEh-RJI5gmeh7_2QuyzU9dSjDwLfPnZoVkshQHrTXReWSwzmGAKQ-IKj_B0dgQg")
+            글자.textContent="프랑스"
+        }
+        else if (event.key=="d") {
+            이미지.setAttribute("src", "https://content.skyscnr.com/m/142548f91b552259/original/cathedral-sevilla-spain.jpg?resize=1800px:1800px&quality=100")
+            글자.textContent="스페인"
+        }
+        else if (event.key=="f") {
+            이미지.setAttribute("src", "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSeVVJXhLzhLlq-OsIlXOhoIuD5gEH3Ta4i6fC0UrvPf_9gVGFHVR9Lb6PGlL4Qyc9nNNmIebEpcDMhHGsaRKHN01JxN8sDIL6mMh2wJw")
+            글자.textContent="미국"
+        }
+        });
+    </script>
+</body>
+</html>
