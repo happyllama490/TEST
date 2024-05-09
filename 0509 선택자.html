@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자, 가상요소, 가상클래스</title>
+    <style>
+    .parent{width: auto; height: 300px; background-color: paleturquoise;}
+    .parent h1 {/* .parent 내부의 모든 h1 */
+        color: rgb(255, 2, 2);
+    }
+    .parent > h1 {
+        background-color: royalblue;
+    }
+    /* parent의 자식이 되는 h1 */
+    section {border: 1px solid #333;}
+
+
+    /* 가상 클래스: 실제로 style 수정하는 것이 아니라, 특정 상황에서만 css룰 가상으로 주는 것 */
+    h1:hover { /* hover: 띄우다. 마우스를 위에 띄우면 발동 */
+        background-color: aliceblue;
+    }
+    h1:active { /* active: 마우스를 클릭하면 발동 */
+        background-color: yellowgreen;
+    }
+    .parent :nth-child(odd) { /* .parent의 n번째 자식인 h1 */
+        text-decoration: underline; color: violet;
+    }
+
+    .parent > h2:nth-of-type(2) { /* n번째에 해당하는 특정 태그 */
+        font-size: 40pt;
+    }
+    input:focus {
+        border: 3px solid #33AAEE;
+    }
+
+    </style>
 </head>
-<style>
-    
-</style>
 <body>
-    
+    <h1>선택자: 내가 원하는 태그를 선택하도록 도와주는 문자</h1>
+    <!-- .parent 내부의 h1만 선택하는 방법?? -->
+    <div class="parent">
+        <h1>박스 안 h1</h1>
+        <h2>h2</h2>
+        <h2>h2</h2>
+        <h1>박스 안 h1</h1>
+        <h1>박스 안 h1</h1>
+        <h1>박스 안 h1</h1>
+        <h2>h2</h2>
+        <h1>박스 안 h1</h1>
+        <section>
+            <h1>섹션 내부의 h1</h1>
+        </section>
+    </div>
+
+    <input type="text" style="width: 300px; height: 100px;">
+
+    <svg id="SvgjsSvg1034" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" preserveAspectRatio="xMidYMid meet" viewBox="0 0 125.32768249511719 147.00001525878906" overflow="visible"><defs id="SvgjsDefs1035"></defs><g id="SvgjsG1036" transform="scale(0.6391660057603206)" opacity="1"><g id="SvgjsG1037" class="eks-K2jjP" transform="translate(15.686400000000006, 0) scale(1.6470719999999996)" light-content="false" non-strokable="false" fill="#3389fa"><path d="M0 0h100v100H0z"></path></g><g id="SvgjsG1038" class="H9obzviz7H" transform="translate(52.83904227004471, 37.112582337049176) scale(0.10682648798807748)" light-content="true" non-strokable="false" fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"><path d="M6 681L358 65c4-6 7-8 14-8h100c6 0 10 2 13 8l356 616c2 4 2 9 0 13l-50 87c-3 5-7 9-13 9H69c-5 0-10-3-12-7L6 694c-3-3-3-10 0-13zm134-7l35-61h391l35 61H140zm485 27c10 0 17-11 12-20L437 336l36-61 282 488H76l-35-62h584zM379 84L41 674h68L449 84h-70zm94 14L191 586h71l199-345c5-10 19-9 24 0l293 508 35-61L473 98zM293 586h257L422 363 293 586z"></path></g><g id="SvgjsG1039" class="text" transform="translate(96.38999938964844, 229.98719877929688) scale(1)" light-content="false" fill="#050505"><path d="M-96.39 0L-73.41 0L-73.41 -8.04L-87.09 -8.04L-87.09 -41.28L-96.39 -41.28Z M-62.43 0L-39.45 0L-39.45 -8.04L-53.13 -8.04L-53.13 -41.28L-62.43 -41.28Z M-6.21 0L3.27 0L-7.71 -41.28L-20.79 -41.28L-31.83 0L-22.47 0L-20.49 -8.28L-8.31 -8.28ZM-14.25 -32.88L-10.17 -15.96L-18.63 -15.96L-14.61 -32.88Z M45.39 0L54.39 0L54.39 -41.28L41.13 -41.28L34.23 -14.82L33.81 -14.82L26.91 -41.28L13.53 -41.28L13.53 0L22.29 0L22.29 -28.56L22.71 -28.56L30.15 0L37.47 0L44.97 -28.56L45.39 -28.56Z M90.21 0L99.69 0L88.71 -41.28L75.63 -41.28L64.59 0L73.95 0L75.93 -8.28L88.11 -8.28ZM82.17 -32.88L86.25 -15.96L77.79 -15.96L81.81 -32.88Z"></path></g></g></svg>
 </body>
 </html>
