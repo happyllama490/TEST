@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        p::before{
+            content: "best";
+            background-color: deeppink; color: white;
+            padding: 5px; margin-right: 10px;
+            border-radius: 8px;
+        }
+
+        p::after {
+            content: "sold out";
+            background-color: blue; color: white;
+            padding: 5px; margin-left: 10px;
+            border-radius: 8px;
+        }
+        p::selection{
+            background-color: greenyellow;
+        }
+
+        p::first-letter{
+           color: yellow; 
+        }
+
+        p::first-line{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상요소</h1>
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis architecto tempora quis assumenda necessitatibus voluptates culpa id, et laudantium dolor.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>

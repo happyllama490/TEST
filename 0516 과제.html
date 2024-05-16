@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .ul1 {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .li1 {
+        display: inline-block;
+        margin-left: 3px;
+        margin-right: 3px;
+        padding: 10px;
+        border: solid;
+        border-radius: 20px;
+        }
+        .li1:hover{
+            color: greenyellow;
+            cursor:pointer;
+            border-color: greenyellow;
+        }
+        .li1:active{
+            background-color: gray;
+        }
+        .box{
+            display: inline-block;
+            overflow: auto;
+        }
+        .box2{
+            display: inline-block;
+            overflow: auto;
+            cursor:pointer;
+        }
+        .li2::before{
+            content: "hot";
+            background-color: red; color: white;
+            padding: 5px; margin-right: 10px;
+            border-radius: 3px;
+        }
+        .li3::before{
+            content: "new";
+            background-color: blue; color: white;
+            padding: 5px; margin-right: 10px;
+            border-radius: 3px;
+        }
+        .li4::before{
+            content: "★";
+            background-color: pink; color: white;
+            padding: 5px; margin-right: 10px;
+            border-radius: 3px;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            width: 300px; height: 40px;
+            border: 1px solid black;
+        }
+        .parent tr:nth-of-type(odd) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body style="background-color: gray;">
+    <br>
+    <div style="background-color: white; width: 1200px; height: 220px; margin: 0 auto; border-radius: 30px; text-align: center;">
+        <br>
+        <svg id="SvgjsSvg1034" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" preserveAspectRatio="xMidYMid meet" viewBox="0 0 125.32768249511719 147.00001525878906" overflow="visible"><defs id="SvgjsDefs1035"></defs><g id="SvgjsG1036" transform="scale(0.6391660057603206)" opacity="1"><g id="SvgjsG1037" class="eks-K2jjP" transform="translate(15.686400000000006, 0) scale(1.6470719999999996)" light-content="false" non-strokable="false" fill="#3389fa"><path d="M0 0h100v100H0z"></path></g><g id="SvgjsG1038" class="H9obzviz7H" transform="translate(52.83904227004471, 37.112582337049176) scale(0.10682648798807748)" light-content="true" non-strokable="false" fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"><path d="M6 681L358 65c4-6 7-8 14-8h100c6 0 10 2 13 8l356 616c2 4 2 9 0 13l-50 87c-3 5-7 9-13 9H69c-5 0-10-3-12-7L6 694c-3-3-3-10 0-13zm134-7l35-61h391l35 61H140zm485 27c10 0 17-11 12-20L437 336l36-61 282 488H76l-35-62h584zM379 84L41 674h68L449 84h-70zm94 14L191 586h71l199-345c5-10 19-9 24 0l293 508 35-61L473 98zM293 586h257L422 363 293 586z"></path></g><g id="SvgjsG1039" class="text" transform="translate(96.38999938964844, 229.98719877929688) scale(1)" light-content="false" fill="#050505"><path d="M-96.39 0L-73.41 0L-73.41 -8.04L-87.09 -8.04L-87.09 -41.28L-96.39 -41.28Z M-62.43 0L-39.45 0L-39.45 -8.04L-53.13 -8.04L-53.13 -41.28L-62.43 -41.28Z M-6.21 0L3.27 0L-7.71 -41.28L-20.79 -41.28L-31.83 0L-22.47 0L-20.49 -8.28L-8.31 -8.28ZM-14.25 -32.88L-10.17 -15.96L-18.63 -15.96L-14.61 -32.88Z M45.39 0L54.39 0L54.39 -41.28L41.13 -41.28L34.23 -14.82L33.81 -14.82L26.91 -41.28L13.53 -41.28L13.53 0L22.29 0L22.29 -28.56L22.71 -28.56L30.15 0L37.47 0L44.97 -28.56L45.39 -28.56Z M90.21 0L99.69 0L88.71 -41.28L75.63 -41.28L64.59 0L73.95 0L75.93 -8.28L88.11 -8.28ZM82.17 -32.88L86.25 -15.96L77.79 -15.96L81.81 -32.88Z"></path></g></g></svg>
+        <h3>width 1200px / 아래 메뉴에 가상클래스 적용하기</h3>
+        <ul class="ul1">
+            <li class="li1">메뉴</li>
+            <li class="li1">공지사항</li>
+            <li class="li1">갤러리</li>
+            <li class="li1">웹디자인기능사</li>
+            <li class="li1">접수 6월 8일</li>
+        </ul>
+    </div>
+    <br>
+    <section style="background-color: white; width: 1200px; height: 400px; margin: 0 auto; border-radius: 30px; padding: 0px; text-align: center;">
+        <br>
+        <h3>section 영역 width:1200px height:400px</h3>
+        <div class="box" style="background-color: gray; width: 570px; height: 340px; border-radius: 30px; text-align: left; padding: 10px;">
+            <h3>width:570px height:340px</h3>
+            <h2>새겨 둘 메세지</h2>
+            <br>
+            <ul>
+                <li class="li2">지금 아니면 못 할 것을 하며 살아라.</li>
+                <br>
+                <li class="li2">사람은 저마다 갈 길이 다르다. 자기 길을 가라.</li>
+                <br>
+                <li class="li3">남이 돕는다고 따라가면 자기 길을 못 가고 얻을 것 못 얻는다.</li>
+                <br>
+                <li class="li2">자랑할 것이 있게 행동해라</li>
+                <br>
+                <li class="li4">모든 삶의 이치는 동일하다. 1등 하려면 힘들다.</li>
+                <br>
+                <li class="li4">제대로 못 했어도 포기하지 말고 교정하면 되는 것도 있다.</li>
+            </ul>
+
+        </div>
+        <div class="box" style="background-color: gray; width: 570px; height: 340px; border-radius: 30px; margin: 0 auto;">
+            <h3>width:570px height:340px</h3>
+            <table border="1" class="parent" style="margin: 0 auto; padding: 10px;">
+                <tr>
+                    <td>table 홀수 줄에 색깔 넣기</td>
+                    <td>table 홀수 줄에 색깔 넣기</td>
+                </tr>
+                <tr>
+                    <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                    <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                </tr>
+                <tr>
+                    <td>홀수는 odd</td>
+                    <td>홀수는 odd</td>
+                </tr>
+                <tr>
+                    <td>짝수는 even</td>
+                    <td>짝수는 even</td>
+                </tr>
+                <tr>
+                    <td>홀수 줄</td>
+                    <td>홀수 줄</td>
+                </tr>
+            </table>
+        </div>
+        <br><br>
+        <section style="background-color: white; width: 1200px; height: 400px; margin: 0 auto; border-radius: 30px; padding: 0px; text-align: center;">
+            <h3>section 영역 width:1200px height:400px</h3>
+            <h3>div로 박스 3개 구현, width:350px</h3>
+            <br>
+            <div>
+            <div class="box2"><img width="350px" src="https://cdn.inflearn.com/wp-content/uploads/vuejsandpure.png"><br>뷰</div>
+            <div class="box2"><img width="350px" src="https://cdn.inflearn.com/wp-content/uploads/node.js-1.jpg"><br>노드.js</div>
+            <div class="box2"><img width="350px" src="https://cdn.inflearn.com/public/courses/327246/cover/16122223-0df0-4605-afa9-5d4eb2680db8/Screenshot-main.jpeg"><br>부트스트랩</div>
+            </div>
+    </section>
+</body>
+</html>
