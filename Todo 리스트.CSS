@@ -16,3 +16,14 @@ input {
     border-radius: 3px;
     padding: 5px;
 }
+.todo-list {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+.like {flex: 1; color: rgb(193, 3, 3);}
+.content {flex: 8;}
+.manage {flex: 1;}
+.check {color: greenyellow;}
+.clear {color: red;}
