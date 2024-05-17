@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 배우는 시간</title>
+    <style>
+        #wrap{
+            display: flex; /* flex는 부모에게 적용 */
+            justify-content: space-evenly; /* 가로 정렬 */
+            align-items: center; /* 세로 정렬 */
+        }
+        .box{
+            width: 300px; background-color: greenyellow; border: 5px solid black;
+        }
+        .box1{ height: 100px; flex: 1; order: 2;} /* flex: 비율조절 order: 순서조절 */
+        .box2{ height: 200px; flex: 8; order: 3;}
+        .box3{ height: 300px; flex: 1; order: 1;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box box1"><h1>박스1</h1></div>
+        <div class="box box2"><h1>박스2</h1></div>
+        <div class="box box3"><h1>박스3</h1></div>
+    </div>
+</body>
+</html>
