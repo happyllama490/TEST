@@ -27,3 +27,6 @@ input {
 .manage {flex: 1;}
 .check {color: greenyellow;}
 .clear {color: red;}
+.like:hover{
+    cursor: pointer;
+}

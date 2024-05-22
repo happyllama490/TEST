@@ -12,7 +12,7 @@
     <div id="wrap">
         <header>
             <h1>Todo</h1>
-            <label><input type="text"></label>
+            <label><input type="text" value=""></label>
         </header>
 
         <section>
@@ -25,6 +25,57 @@
                 </div>
             </div>
         </section>
+            
+        <script>
+            let 입력박스 = document.querySelector("input")
+            let 내용 = document.querySelector(".content")
+            let 섹션 = document.querySelector("section")
+            let 좋아요 = document.querySelector(".like")
+            let 하트 = document.querySelector(".material-icons")
+            입력박스.addEventListener("keydown", function(event){
+                if (event.key=="Enter" && 입력박스.value!="") {
+                    console.log(입력박스.value)
+                    let div박스 = document.createElement("div")
+                    div박스.classList.add("todo-list")
+
+                    let p태그1 = document.createElement("p")
+                    p태그1.classList.add("like")
+                    p태그1.innerHTML = `<i class="material-icons">favorite_border</i></p>`
+                    div박스.appendChild(p태그1)
+
+                    let p태그2 = document.createElement("p")
+                    p태그2.classList.add("content")
+                    p태그2.textContent=입력박스.value
+                    div박스.appendChild(p태그2)
+
+                    let 관리div = document.createElement("div")
+                    관리div.classList.add("manage")
+
+                    let i태그1 = document.createElement("i")
+                    i태그1.classList.add("material-icons")
+                    i태그1.classList.add("check")
+                    i태그1.textContent="check"
+
+                    let i태그2 = document.createElement("i")
+                    i태그2.classList.add("material-icons")
+                    i태그2.classList.add("clear")
+                    i태그2.textContent="clear"
+
+                    관리div.appendChild(i태그1)
+                    관리div.appendChild(i태그2)
+
+                    div박스.appendChild(관리div)
+
+                    섹션.appendChild(div박스)
+                    console.log(div박스)
+
+                    입력박스.value=""
+                }
+            })
+                    좋아요.addEventListener("click", function(){
+                    하트.textContent="favorite"
+            })  
+        </script>
     </div>
 </body>
 </html>
