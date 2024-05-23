@@ -30,3 +30,9 @@ input {
 .like:hover{
     cursor: pointer;
 }
+.check:hover{
+    cursor: pointer;
+}
+.clear:hover{
+    cursor: pointer;
+}

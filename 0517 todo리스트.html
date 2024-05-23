@@ -16,22 +16,12 @@
         </header>
 
         <section>
-            <div class="todo-list">
-                <p class="like"><i class="material-icons">favorite_border</i></p>
-                <p class="content">내용</p>
-                <div class="manage">
-                    <i class="material-icons check">check</i>
-                    <i class="material-icons clear">clear</i>
-                </div>
-            </div>
         </section>
             
         <script>
             let 입력박스 = document.querySelector("input")
             let 내용 = document.querySelector(".content")
             let 섹션 = document.querySelector("section")
-            let 좋아요 = document.querySelector(".like")
-            let 하트 = document.querySelector(".material-icons")
             입력박스.addEventListener("keydown", function(event){
                 if (event.key=="Enter" && 입력박스.value!="") {
                     console.log(입력박스.value)
@@ -40,7 +30,20 @@
 
                     let p태그1 = document.createElement("p")
                     p태그1.classList.add("like")
-                    p태그1.innerHTML = `<i class="material-icons">favorite_border</i></p>`
+
+                    let i태그 = document.createElement("i")
+                    i태그.classList.add('material-icons')
+                    i태그.textContent = 'favorite_border'
+                    p태그1.appendChild(i태그)
+
+                    i태그.addEventListener('click', function() {
+                        if(i태그.textContent=='favorite'){
+                            i태그.textContent="favorite_border"
+                        }
+                        else {
+                            i태그.textContent='favorite'
+                        }
+                    })
                     div박스.appendChild(p태그1)
 
                     let p태그2 = document.createElement("p")
@@ -56,10 +59,20 @@
                     i태그1.classList.add("check")
                     i태그1.textContent="check"
 
+                    i태그1.addEventListener("click", function() {
+                        p태그2.style.color="#BBB"
+                        p태그2.style.textDecoration="line-through"
+                        i태그1.style.display='none'
+                    })
+
                     let i태그2 = document.createElement("i")
                     i태그2.classList.add("material-icons")
                     i태그2.classList.add("clear")
                     i태그2.textContent="clear"
+
+                    i태그2.addEventListener("click", function() {
+                        섹션.removeChild(div박스)
+                    })
 
                     관리div.appendChild(i태그1)
                     관리div.appendChild(i태그2)
@@ -72,9 +85,7 @@
                     입력박스.value=""
                 }
             })
-                    좋아요.addEventListener("click", function(){
-                    하트.textContent="favorite"
-            })  
+
         </script>
     </div>
 </body>
