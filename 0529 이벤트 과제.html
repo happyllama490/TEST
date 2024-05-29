@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타자연습</title>
+</head>
+<body>
+    <h1>애국가 타자연습</h1>
+    <h2>타이핑을 하여 내용이 일치하면 ok 표시</h2>
+    <h2>ok 표시를 위한 태그는 span 사용 권장</h2>
+    <hr>
+    <h1>input 이벤트와 조건문을 활용</h1>
+    <h2>값을 입력하면 맞는지 점검함</h2>
+    <label>동해물과 <input type="text" id="one" value=""><span id="h1"></span></label>
+    <br><br>
+    <label>백두산이 <input type="text" id="two" value=""><span id="h2"></span></label>
+    <h1>키보드 이벤트 활용</h1>
+    <h2>Enter를 누르면 확인함</h2>
+    <label>마르고 <input type="text" id="three" value=""><span id="h3"></span></label>
+    <br><br>
+    <label>닳도록 <input type="text" id="four" value=""><span id="h4"></span></label>
+    <script>
+        let 글자=document.querySelector("#h1")
+        let 글자2=document.querySelector("#h2")
+        let 글자3=document.querySelector("#h3")
+        let 글자4=document.querySelector("#h4")
+        let 원=document.querySelector("#one")
+        let 투=document.querySelector("#two")
+        let 쓰리=document.querySelector("#three")
+        let 포=document.querySelector("#four")
+        원.addEventListener("input",function(event){
+                if (원.value=="동해물과") {
+                    글자.textContent=" o"
+                }
+                else{
+                    글자.textContent=" x"
+            }
+        })
+        투.addEventListener("input",function(event){
+                if (투.value=="백두산이") {
+                    글자2.textContent=" o"
+                }
+                else{
+                    글자2.textContent=" x"
+            }
+        })
+        쓰리.addEventListener("keydown",function(event){
+            if (event.key=="Enter") {
+                if (쓰리.value=="마르고") {
+                    글자3.textContent=" o"
+                }
+                else{
+                    글자3.textContent=" x"
+                }
+            }
+        })
+        포.addEventListener("keydown",function(event){
+            if (event.key=="Enter") {
+                if (포.value=="닳도록") {
+                    글자4.textContent=" o"
+                }
+                else{
+                    글자4.textContent=" x"
+                }
+            }
+        })
+    </script>
+</body>
+</html>
