@@ -1,0 +1,49 @@
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위 변환 과제</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            width: 170px; height: 20px;
+        }
+        .box2 {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>단위 변환</h1>
+    <h3>cm을 선택한 단위로 변환합니다</h3>
+    <label><input type="text" value="" id="cm"> cm</label>
+    <h3>변환</h3>
+    <div class="box2">
+    <div class="box"><span id="num"></span></div>
+    </div>
+    <div class="box2">
+    <select name="" id="">
+        <option value="1">inch</option>
+        <option value="2">mm</option>
+        <option value="3">m</option>
+    </select>
+    </div>
+    <script>
+        const 셀렉 = document.querySelector("select")
+        let 숫자=document.querySelector("#num")
+        let 입력문=document.querySelector("#cm")
+        셀렉.addEventListener("change", (event) => {
+            if(event.target.value==1) {
+                숫자.textContent=입력문.value/2.54
+            }
+            else if(event.target.value==2) {
+                숫자.textContent=입력문.value*10
+            }
+            else if(event.target.value==3) {
+                숫자.textContent=입력문.value*0.01
+            }
+        })
+    </script>
+</body>
+</html>
