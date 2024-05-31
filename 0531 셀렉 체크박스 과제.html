@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서 과제</title>
+</head>
+<body>
+    <h1>주문서</h1>
+    <h2>먹고 싶은 메뉴를 선택합니다</h2>
+    <label><input type="checkbox" name="" id="one">치킨 16,000 \</label>
+    <br>
+    <label><input type="checkbox" name="" id="two">초밥 20,000 \</label>
+    <br>
+    <label><input type="checkbox" name="" id="three">순대 5,000 \</label>
+    <hr>
+    <h1>가격 :<span id="gap">0</span></h1>
+
+    <script>
+        const 체크박스 = document.querySelector("#one")
+        const 체크박스2 = document.querySelector("#two")
+        const 체크박스3 = document.querySelector("#three")
+        let 가격 = document.querySelector("#gap")
+        let 현재 = 0
+        console.log(체크박스.checked)
+        체크박스.addEventListener("change", (event) => {
+            if(체크박스.checked==true){
+                더하기1=현재+=16000
+                가격.textContent=더하기1
+            }
+            else if(체크박스.checked==false){
+                let 빼기1=현재-=16000
+                가격.textContent=빼기1
+            }
+        })
+        체크박스2.addEventListener("change", (event) => {
+            if(체크박스2.checked==true){
+                더하기1=현재+=20000
+                가격.textContent=더하기1
+            }
+            else if(체크박스2.checked==false){
+                빼기1=현재-=20000
+                가격.textContent=빼기1
+            }
+        })
+        체크박스3.addEventListener("change", (event) => {
+            if(체크박스3.checked==true){
+                더하기1=현재+=5000
+                가격.textContent=더하기1
+            }
+            else if(체크박스3.checked==false){
+                빼기1=현재-=5000
+                가격.textContent=빼기1
+            }
+        })
+    </script>
+</body>
+</html>
