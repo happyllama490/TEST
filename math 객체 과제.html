@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .box{
+            display: flex;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            justify-content: space-around;
+        }
+        .box2{
+            display: flex;
+            width: 120px;
+            height: 70px;
+            text-align: center;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: auto; text-align: center;">
+        <br>
+        <h1>로또 당첨 번호</h1>
+        <h2>1~45의 숫자 범위 6개 뽑기<br>중복된 숫자는 입력되지 않음</h2>
+    </div>
+    <div style="margin: 0 auto; width: 800px;">
+        <div style="background-color: gray; width: 800px; height: 30px;" class="box">
+            <div>1번</div>
+            <div>2번</div>
+            <div>3번</div>
+            <div>4번</div>
+            <div>5번</div>
+            <div>6번</div>
+        </div>
+        <div style="width: 800px; height: 80px; background-color: bisque;" class="box2">
+            <div><span id="one"></span></div>
+            <div><span id="two"></span></div>
+            <div><span id="three"></span></div>
+            <div><span id="four"></span></div>
+            <div><span id="five"></span></div>
+            <div><span id="six"></span></div>
+        </div>
+    </div>
+    <script>
+        let 로또=[] 
+        while(로또.length<7){
+            let 숫자=Math.floor(Math.random()*45+1)
+            if(로또.indexOf(숫자)<0){
+                로또.push(숫자)
+            }
+        }
+        let 디브1=document.querySelector("#one")
+        디브1.textContent=로또[1]
+        let 디브2=document.querySelector("#two")
+        디브2.textContent=로또[2]
+        let 디브3=document.querySelector("#three")
+        디브3.textContent=로또[3]
+        let 디브4=document.querySelector("#four")
+        디브4.textContent=로또[4]
+        let 디브5=document.querySelector("#five")
+        디브5.textContent=로또[5]
+        let 디브6=document.querySelector("#six")
+        디브6.textContent=로또[6]
+        
+    </script>
+</body>
+</html>
