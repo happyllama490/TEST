@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨앱</title>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=642b4a05118b2127621500b574808536`)
+            .then(function (response) {
+	            console.log(response)
+	            document.write("기온: ", (response.data.main.temp-273).toFixed(2))
+	            document.write("</br>체감온도: ", (response.data.main.feels_like-273).toFixed(2))
+	            document.write("</br>풍속: ", response.data.wind.speed)
+	            document.write("</br>습도: ", response.data.main.humidity)
+            })
+    </script>
+</body>
+</html>

@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>함수 복습</title>
-</head>
-<body>
-    <h1>h1태그</h1>
-    <h2>h2태그</h2>
-    <h3>h3태그</h3>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수 복습</title>
+    </head>
+    <body>
+        <h1>h1태그</h1>
+        <h2>h2태그</h2>
+        <h3>h3태그</h3>
 
-    <script>
-        // 함수: 명령어 모아서 만들어놓고 나중에 쉽게 실행하는 매크로
+        <script>
+            // 함수: 명령어 모아서 만들어놓고 나중에 쉽게 실행하는 매크로
 
+            평균점수(100, 98, 95)
 
-        평균점수(100, 98, 95)   
+            function 평균점수(가져온점수1, 가져온점수2, 가져온점수3) {
+                let 평균
+                평균 = (가져온점수1 + 가져온점수2 + 가져온점수3) / 3 //평균점수 계산
+                console.log(평균) //평균점수 출력
+            }
 
+            // DOM의 사용 순서. 1. 원하는 대상 선택하기 2. 조작하기
+            let h1지정
+            h1지정 = document.querySelector("h1") // "" 안 쓰면 변수를 지정
 
-        function 평균점수(가져온점수1, 가져온점수2, 가져온점수3) {
-            let 평균
-            평균 = (가져온점수1 + 가져온점수2 + 가져온점수3) / 3 //평균점수 계산
-            console.log(평균) //평균점수 출력
-        }
-        
+            let h2지정
+            h2지정 = document.querySelector("h2") // "" 안 쓰면 변수를 지정
 
-        // DOM의 사용 순서. 1. 원하는 대상 선택하기 2. 조작하기
-        let h1지정
-        h1지정 = document.querySelector("h1") // "" 안 쓰면 변수를 지정
+            let h3지정
+            h3지정 = document.querySelector("h3") // "" 안 쓰면 변수를 지정
 
-        let h2지정
-        h2지정 = document.querySelector("h2") // "" 안 쓰면 변수를 지정 
+            h1지정.style.color = "coral"
 
-        let h3지정
-        h3지정 = document.querySelector("h3") // "" 안 쓰면 변수를 지정
+            h2지정.style.margin = "50px"
 
-        h1지정.style.color = "coral"
+            // 2단어로 된 스타일은 대문자로 구분하여 붙여서 써야함 text-align -> textAlign background-color ->
+            // backgroundColor
+            h3지정.style.border = "1px solid #CCC"
+            h3지정.style.width = "200px"
+            h3지정.style.height = "50px"
+            h3지정.style.borderRadius = "5px"
 
-        h2지정.style.margin = "50px"
-        
-        // 2단어로 된 스타일은 대문자로 구분하여 붙여서 써야함
-        // text-align -> textAlign
-        // background-color -> backgroundColor
-        h3지정.style.border = "1px solid #CCC"
-        h3지정.style.width = "200px"
-        h3지정.style.height = "50px"
-        h3지정.style.borderRadius = "5px"
+            // 콜백함수 (익명함수. 이름 없는 함수)
+            function 전교등수(점수1, 점수2, function () {}) {}
 
-
-        // 콜백함수 (익명함수. 이름 없는 함수)
-        function 전교등수(점수1, 점수2, function () {} ) {
-        }
-
-        function 전교등수(점수1, 점수2, 함수)
-
-        function 함수() {}
-
-        
-
-
-
-    </script>
-</body>
+            function 전교등수(점수1, 점수2, 함수)function 함수() {}
+        </script>
+    </body>
 </html>

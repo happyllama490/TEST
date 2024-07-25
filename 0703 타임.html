@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타임 함수</title>
+    <style>
+        .box{
+            width: 300px; height: 300px; background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        let 박스 = document.querySelector(".box")
+        
+        // SetInterval. interval 간격
+        
+        let time = 1
+        let 간격함수 = setInterval(function(){
+            console.log(time)
+            time +=1
+
+            박스.textContent = `${time}초`
+        }, 1000)
+
+        clearInterval(간격함수)
+
+        let 초
+        초 = 5
+        // setTimeout
+        let 타임아웃함수 = setTimeout(function(){
+            alert(`${초}초 지났음`)
+        }, 초 * 1000)
+
+        clearInterval(타임아웃함수)
+
+
+
+        let 병윤함수 = setInterval(function () {
+            console.log("병윤아 너는 ㅇㅇ이니?")
+        }, 1000)
+
+    </script>
+</body>
+</html>
