@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+</head>
+<style>
+    .box{
+        width: 300px; height: 300px;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <h2>Your Shopping Cart</h2>
+    <p>forEach 함수 사용할 것</p>
+    <p>Quantity의 각 버튼마다 동일한 event를 일괄 적용할 것</p>
+    <div class="flex">
+    <div class="box">
+        <h1>충만치킨 1마리</h1>
+        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg" alt="" width="200px" height="200px">
+        <p>price \21000</p>
+        <p>Quantity: <input type="number" class="gap1" id="gaps"></p>
+    </div>
+    <br>
+    <div class="box">
+        <h1>충만치킨 1마리</h1>
+        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg" alt="" width="200px" height="200px">
+        <p>price \17000</p>
+        <p>Quantity: <input type="number" class="gap2" id="gaps"></p>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="flex">
+    <div class="box">
+        <h1>충만치킨 1마리</h1>
+        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg" alt="" width="200px" height="200px">
+        <p>price \10000</p>
+        <p>Quantity: <input type="number" class="gap3" id="gaps"></p>
+    </div>
+    <br>
+    <div class="box">
+        <h1>충만치킨 1마리</h1>
+        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg" alt="" width="200px" height="200px">
+        <p>price \8000</p>
+        <p>Quantity: <input type="number" class="gap4" id="gaps"></p>
+    </div>
+    </div>
+    <br>
+    <br><br>
+    <h1>Total: \<span class="won">0</span></h1>
+    <script>
+        const 갯수1=document.querySelector(".gap1")
+        const 갯수2=document.querySelector(".gap2")
+        const 갯수3=document.querySelector(".gap3")
+        const 갯수4=document.querySelector(".gap4")
+        let 갯수5=document.querySelector(".gap1")
+        let 갯수6=document.querySelector(".gap2")
+        let 갯수7=document.querySelector(".gap3")
+        let 갯수8=document.querySelector(".gap4")
+        let 가격=0
+        let 총합=document.querySelector(".won")
+        const 합들=document.querySelectorAll("#gaps")
+        let 테스트1=0
+        let 테스트2=0
+        let 테스트3=0
+        let 테스트4=0
+        갯수1.addEventListener("change", () => {
+            테스트1=21000*갯수5.value
+            합들.forEach(function() {
+                총합.textContent=테스트1+테스트2+테스트3+테스트4
+        })
+            })
+        갯수2.addEventListener("change", () => {
+            테스트2=17000*갯수6.value
+            합들.forEach(function() {
+                총합.textContent=테스트1+테스트2+테스트3+테스트4
+        })
+        })
+        갯수3.addEventListener("change", () => {
+            테스트3=10000*갯수7.value
+            합들.forEach(function() {
+                총합.textContent=테스트1+테스트2+테스트3+테스트4
+        })
+        })
+        갯수4.addEventListener("change", () => {
+            테스트4=8000*갯수8.value
+            합들.forEach(function() {
+                총합.textContent=테스트1+테스트2+테스트3+테스트4
+        })
+        })
+    </script>
+</body>
+</html>
