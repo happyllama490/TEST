@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+</head>
+<body>
+    <h3>시간 설정<input type="text" class="time">초<button class="but1">버튼</button><button class="but2">정지</button></h3>
+    <h1><span class="box">0</span>s</h1>
+    <h1></h1>
+    <script>
+        let 박스 = document.querySelector(".box")
+        let time=document.querySelector(".time")
+        let 버튼=document.querySelector(".but1")
+        let 버튼2=document.querySelector(".but2")
+        let 간격함수
+        let 시작여부 = false
+
+        버튼.addEventListener("click", function() {
+            if(시작여부) return
+            시작여부=true
+            let 입력시간 = time.value
+            박스.textContent=입력시간
+            clearInterval(간격함수)
+            간격함수 = setInterval(function() {
+                입력시간 -= 1
+                박스.textContent = 입력시간;
+                if (입력시간 <= 0) {
+                    박스.textContent=0
+                    clearInterval(간격함수);
+                    시작여부=false
+                }
+            }, 1000);
+        });
+            버튼2.addEventListener("click", function() {
+            clearInterval(간격함수)
+            시작여부=false
+        })
+        
+    </script>
+</body>
+</html>

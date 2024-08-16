@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+</head>
+<body>
+    <h1>1. 일정 간격마다 함수 코드를 실행하는 것 (주기적으로 실행)</h1>
+
+    <h2>2. 일정 시간 뒤에 함수 코드를 실행하는 것 (타이머가 완료되면 한 번 신행)</h2>
+
+    <script>
+
+        // 일정 시간 마다
+        let setInterval에넣을함수 = function() {
+            console.log("테스트")
+        } // Interval : 간격 + 컴퓨터에서는 보통 1000이 1초
+        let setInterval함수 = setInterval(setInterval에넣을함수, 1000)
+
+        clearInterval(setInterval에넣을함수) // setInterval로 돌아가는 함수를 중지
+
+        let setTimeout함수 = setTimeout(function() {
+            alert("3초가 지나 실행됨")
+        }, 3000)
+
+        clearTimeout(setTimeout함수)
+
+
+    </script>
+</body>
+</html>
