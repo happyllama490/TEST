@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="date" name="" class="date">
+    <div class="box"></div>
+    <script>
+        let 입력 = document.querySelector(".date")
+        let 입력날짜
+        let 현재날짜
+        let 박스 = document.querySelector(".box")
+
+        입력.addEventListener("change", function(){
+            간격함수 = setInterval(function() {
+            현재날짜 = new Date()
+            입력날짜=입력.value
+            let 입력결과=new Date(입력날짜).getTime()
+            let 현재결과=현재날짜.getTime()
+            console.log(new Date(입력날짜).getTime()/1000)
+            console.log(현재날짜.getTime()/1000)
+            let 초=((입력결과-현재결과)/1000)
+            console.log(초)
+            let 분=초/60
+            console.log(분)
+            let 시간=분/60
+            console.log(시간)
+            let 일=시간/24
+            console.log(일)
+            console.log(new Date(입력날짜).getSeconds   ())
+            console.log(현재날짜.getSeconds())
+                박스.textContent=Math.floor(일)+"일"+ Math.floor(new Date(입력날짜).getHours())+"시간"+ Math.floor(60-현재날짜.getMinutes())+"분"+ Math.floor(60-현재날짜.getSeconds())+"초"
+            }, 1000);
+        })
+    </script>
+</body>
+</html>
