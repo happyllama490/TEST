@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .flex{
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-warning">
+    <div class="container" style="background-color: white; width: 1200px; height: 800px; margin-top: 70px; border-radius: 10px;">
+        <div style="padding: 40px;">
+            <h1>회원가입 하세요</h1>
+                <br>
+                <button class="btn bg-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">이용 약관 안내</button>
+    
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">이용 약관</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque impedit aliquid quam voluptates incidunt repellat aliquam, officia distinctio vitae reiciendis! Iste iusto porro illo et quisquam, possimus optio odio.
+                </div>
+                </div>
+            </div>
+        <div class="form-floating mb-3 flex">
+            <div class="input-group mb-3">
+                <span id="basic-addon1" style="width: 150px;"
+                data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="사용할 ID를 입력하세요">ID</span>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="form-floating mb-3 flex">
+            <div class="input-group mb-3">
+                <span id="basic-addon1" style="width: 150px;"
+                data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="사용할 비밀번호를 입력하세요">비밀번호</span>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div> 
+        <div class="form-floating mb-3 flex">
+            <div class="input-group mb-3">
+                <span id="basic-addon1" style="width: 150px;"
+                data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="비밀번호를 한 번 더 입력하세요">비밀번호 확인</span>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>    
+        <div class="input-group mb-3">
+            <span id="basic-addon1" style="width: 150px;"
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="당신의 이름">이름</span>
+            <input type="text" class="form-control" placeholder="First name" aria-label="Username">
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Server">
+        </div>
+        <div class="form-floating mb-3 flex">
+            <div class="input-group mb-3">
+                <span id="basic-addon1" style="width: 150px;"
+                data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="휴대전화 번호 입력하세요">연락처</span>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <div class="input-group mb-3">
+                <span id="basic-addon1" style="width: 150px;">성별</span>
+                <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        남
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        여
+                    </label>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="form-floating mb-3 flex">
+            <div class="input-group mb-3">
+                <span id="basic-addon1" style="width: 150px;">취미</span>
+                <div class="form-check" style="width: 150px;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        게임
+                    </label>
+                </div>
+                <div class="form-check" style="width: 150px;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        운동
+                    </label>
+                </div>
+                <div class="form-check" style="width: 150px;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        독서
+                    </label>
+                </div>
+                <div class="form-check" style="width: 150px;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        음악
+                    </label>
+                </div>
+                <div class="form-check" style="width: 150px;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        여행
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="form-check" style="width: 150px;">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                로봇이 아닙니다
+            </label>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" id="liveToastBtn">회원가입</button>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <img width="50px" src="data:image/jpeg;base64,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" class="rounded me-2" alt="...">
+            <strong class="me-auto">가입 완료 안내</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                제출이 완료되었습니다
+            </div>
+        </div>
+        </div>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+        })
+        }
+    </script>
+</body>
+</html>
