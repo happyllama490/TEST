@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>프로미스 Promise : 약속</h1>
+    
+
+    <script>
+        let 병윤이약속 = new Promise( (성공, 실패) =>{
+            if(false) {
+                성공("작업이 성공했습니다.")
+            }
+            else { // 실패한 경우
+                실패("작업이 실패했습니다.")
+            }
+        })
+
+        병윤이약속.then((message) => {console.log(message)}) // riot API를 정상호출 했을 때, 날씨앱 데이터 정상호출 했을 때,
+        .catch((message) => {console.log(message)}) // 데이터 못 받아왔을 때
+
+
+        // 그냥 코드
+        function 싱크와wait를사용() {
+            병윤이를기다린다()
+            다음약속을진행한다()
+        }
+
+        // sync와 wait를 사용한 코드
+        async function 싱크와wait를사용() {
+            await 병윤이를기다린다()
+            await 다음약속을진행한다()
+        }
+    </script>
+</body>
+</html>
